@@ -1,7 +1,7 @@
 const http = require('http');
 
 const server = http.createServer((req, res) => {
-  res.end('Mooglelabs-Seasia-rock');
+  res.end('kubernetes-cicd-terraform');
 });
 
 server.listen(3000, () => {
