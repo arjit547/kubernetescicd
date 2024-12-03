@@ -27,6 +27,6 @@ phases:
       - cat ~/.kube/config
       - aws sts get-caller-identity
       - kubectl config view --minify=true
-      - kubectl delete deployment deployment-2048100 -n game-20487345
-      - kubectl apply -f Deployment.yaml
-      - kubectl apply -f Service.yaml
+      - kubectl delete deployment deployment-20489020 -n game-2048120
+      - kubectl apply -f dsterra.yaml
+      - kubectl apply -f ingress.yaml
