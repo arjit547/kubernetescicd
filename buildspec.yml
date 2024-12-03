@@ -2,6 +2,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
+      nodejs: 14
     commands:
       - curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.22.2/2022-01-31/bin/darwin/amd64/aws-iam-authenticator
       - chmod +x ./aws-iam-authenticator
@@ -30,4 +31,3 @@ phases:
       - kubectl config view --minify=true
       - kubectl set image deployment/deployment-20489020 iaf=578813437933.dkr.ecr.us-east-1.amazonaws.com/iaf:latest -n game-2048120
       - kubectl rollout status deployment/deployment-20489020 -n game-2048120
-
