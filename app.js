@@ -1,7 +1,7 @@
 const http = require('http');
 
 const server = http.createServer((req, res) => {
-  res.end('kubernetes-cicd-terraform');
+  res.end('kubernetes-CICD');
 });
 
 server.listen(3000, () => {
