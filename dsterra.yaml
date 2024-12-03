@@ -22,7 +22,7 @@ spec:
       containers:
       - image: 578813437933.dkr.ecr.us-east-1.amazonaws.com/iaf
         imagePullPolicy: Always
-        name: app-20489220
+        name: iaf
         ports:
         - containerPort: 3000
 ---
@@ -40,5 +40,3 @@ spec:
   selector:
     app.kubernetes.io/name: app-20489220
 ---
-
-                  
