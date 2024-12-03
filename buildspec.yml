@@ -12,6 +12,8 @@ phases:
       - mv ./kubectl /usr/local/bin/kubectl
   pre_build:
     commands:
+      - echo "Logging in to Docker registry"
+      - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 578813437933.dkr.ecr.us-east-1.amazonaws.com
   build:
     commands:
