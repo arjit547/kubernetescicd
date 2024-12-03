@@ -29,5 +29,4 @@ phases:
       - cat ~/.kube/config
       - aws sts get-caller-identity
       - kubectl config view --minify=true
-      - kubectl set image deployment/deployment-20489020 iaf=578813437933.dkr.ecr.us-east-1.amazonaws.com/iaf:latest -n game-2048120
-      - kubectl rollout status deployment/deployment-20489020 -n game-2048120
+      - kubectl rollout restart deployment deployment-20489020 -n game-2048120
